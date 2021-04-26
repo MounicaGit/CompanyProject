@@ -20,12 +20,12 @@ class _UsersState extends State<Users> {
     super.initState();
   }
 
-  _sortData() {
+  void _sortData() {
     arr = widget.arguments['data'].values.toList()[0] as List;
     arr.sort((a, b) => a.firstName.compareTo(b.firstName));
   }
 
-  _buildListWidget() {
+  Container _buildListWidget() {
     return Container(
         height: MediaQuery.of(context).size.height / 1.2,
         child: ListView.builder(
@@ -37,7 +37,7 @@ class _UsersState extends State<Users> {
         ));
   }
 
-  _buildUserRow(int index) {
+  Dismissible _buildUserRow(int index) {
     return Dismissible(
         key: UniqueKey(),
         onDismissed: (direction) {

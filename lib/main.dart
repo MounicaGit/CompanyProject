@@ -1,6 +1,6 @@
 import 'package:Company/bloc/company/company_bloc.dart';
-import 'package:Company/departments.dart';
-import 'package:Company/users.dart';
+import 'package:Company/screens/departments.dart';
+import 'package:Company/screens/users.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

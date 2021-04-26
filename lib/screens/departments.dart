@@ -4,7 +4,7 @@ import 'package:Company/model/company.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/company/company_state.dart';
+import '../bloc/company/company_state.dart';
 
 class Deparments extends StatefulWidget {
   _DeparmentsState createState() => _DeparmentsState();
@@ -54,12 +54,12 @@ class _DeparmentsState extends State<Deparments> {
     return finalArr;
   }
 
-  _onDismiss(int index, User user) {
+  void _onDismiss(int index, User user) {
     debugPrint('_onDismiss=> $index ${user.firstName}');
     setState(() {});
   }
 
-  _buildGridView(List data) {
+  Container _buildGridView(List data) {
     return Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
